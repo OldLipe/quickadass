@@ -12,7 +12,7 @@
 
 ```{r}
 # Parte do código da Amita
-redshift <- read.csv("./inst/extdata/redshift_between0and7.csv")
+redshifts <- read.csv("./inst/extdata/redshift_between0and7.csv")
 
 # Corrigindo o nome dos atributos
 redshifts <- redshifts[c("u", "g", "r", "i", "z", "redshift")]
@@ -40,7 +40,7 @@ nnet_treino(redshift_ggsom_7_7, path = "./inst/extdata/", it = 100)
 lista_soms <- list(redshifts_som_0_7_7_7,
                     redshifts_som_0_7_9_9)
 
-treino(lista_soms, path  = "./inst/extdata/", it = 1000)
+treino(lista_soms, class = redshifts[6], path  = "./inst/extdata/", it = 1000)
 ```
 
 ## Visualização

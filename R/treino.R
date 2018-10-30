@@ -113,10 +113,10 @@ nnet_treino <- function(redshift_ggsom, path, it) {
 #' @param it número de iterações
 #'
 #' @export
-treino <- function(lista, path, it) {
+treino <- function(lista, class, path, it) {
   for (i in lista) {
 
-    redshift_ggsom <- cria_ggsom(i)
+    redshift_ggsom <- cria_ggsom(i, class)
 
     nnet_treino(redshift_ggsom, path, it)
   }
