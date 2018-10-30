@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1540922602422.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6ECE6951",
+    "lastKnownWriteTime" : 1540925905,
+    "last_content_update" : 1540925905634,
+    "path" : "~/ADASS/adass2018/R/gridsom_line.R",
+    "project_path" : "R/gridsom_line.R",
+    "properties" : {
+        "cursorPosition" : "11,2",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

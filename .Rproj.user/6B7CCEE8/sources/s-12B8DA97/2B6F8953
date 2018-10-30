@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1540921410324.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2B6F8953",
+    "lastKnownWriteTime" : 1540929443,
+    "last_content_update" : 1540929443558,
+    "path" : "~/ADASS/adass2018/R/treino.R",
+    "project_path" : "R/treino.R",
+    "properties" : {
+        "cursorPosition" : "120,40",
+        "scrollLine" : "96"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

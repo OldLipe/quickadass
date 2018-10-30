@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1540922447623.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "190E2092",
+    "lastKnownWriteTime" : 1540927002,
+    "last_content_update" : 1540927002544,
+    "path" : "~/ADASS/adass2018/R/aes_som.R",
+    "project_path" : "R/aes_som.R",
+    "properties" : {
+        "cursorPosition" : "77,15",
+        "scrollLine" : "56",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
