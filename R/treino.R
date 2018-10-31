@@ -93,7 +93,7 @@ nnet_treino <- function(redshift_ggsom, path, it) {
   }
   write.csv(Sigmas,
             file = paste(path,
-                         "Sigmas_nnet_specz0a7_som_",
+                         "Sigmas_nnet_specz0a1_som_",
                          max(redshift_ggsom$x),"_",
                          max(redshift_ggsom$y),"_",
                          it,

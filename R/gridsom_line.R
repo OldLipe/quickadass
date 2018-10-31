@@ -20,10 +20,10 @@ gridsom_line <- function(redshift_ggsom) {
   redshift_ggsom_gather <- junta_conjunto(redshift_ggsom)
 
   ggplot(redshift_ggsom_gather, aes(x = var, y = values, group = id)) +
-    geom_line(colour = "grey50") +
-    geom_point() +
+    geom_line(alpha=0.3, colour = "grey50") +
+    geom_point(alpha=0.7) +
     labs(
-      title = "Redshift between 0 and 7",
+      title = "Redshift between 0 and 1",
       caption = "Source: Amita",
       y = "Values",
       x = "Filter"
