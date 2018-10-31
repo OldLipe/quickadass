@@ -11,6 +11,8 @@
 ## Para criar um ggsom
 
 ```{r}
+set.seed(999)
+
 # Parte do código da Amita
 redshifts <- read.csv("./inst/extdata/redshift_between0and7.csv")
 
