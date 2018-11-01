@@ -12,20 +12,21 @@
 gridsom_boxplot <- function(conjunto){
   redshift_result <- gather_data(conjunto)
 
-  ggplot(redshift_result, aes(x = neurons, y = values, group = neurons)) +
-    geom_boxplot(outlier.color = "red", outlier.shape = 16,
-                 outlier.size = 2)+
-    stat_summary(fun.y=mean, geom="point", shape=23, size=4) +
+  ggplot(redshift_result, aes(x = as.factor(neurons), y = values, group=X)) +
+    geom_boxplot()+
+    stat_summary(fun.y=mean,
+                 geom="point",
+                 shape=20,
+                 size=1,
+                 color="red",
+                 fill="red") +
     labs(
       title = "Redshift between 0 and 1",
       caption = "Source: Amita",
       y = "Sigma NMAD",
       x = "# de Neuronios ocultos"
     ) +
-    scale_y_continuous(
-      breaks = seq(0, 0.1, 0.010)
-    ) +
-    scale_x_continuous(breaks = c(5, 10, 30, 50, 70, 90)) +
+    scale_x_discrete(limits=c("5", "10", "30", "50", "70", "90")) +
     facet_grid(redshift_result$y ~ redshift_result$x) +
     theme_calc() +
     theme(
