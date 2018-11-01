@@ -23,7 +23,7 @@ gridsom_line <- function(redshift_ggsom) {
     geom_line(colour = "grey50") +
     geom_point() +
     labs(
-      title = "Redshift between 0 and 1",
+      title = "Redshift between 0 and 7",
       caption = "Source: Amita",
       y = "Values",
       x = "Filter"
