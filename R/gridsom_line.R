@@ -16,15 +16,15 @@
 #'
 #' @export
 #'
-gridsom_line <- function(redshift_ggsom) {
+gridsom_line <- function(redshift_ggsom, redshift_value) {
   redshift_ggsom_gather <- junta_conjunto(redshift_ggsom)
 
   ggplot(redshift_ggsom_gather, aes(x = var, y = values, group = id)) +
     geom_line(colour = "grey50") +
     geom_point() +
     labs(
-      title = "Redshift between 0 and 7",
-      caption = "Source: Amita",
+      title = paste("Redshift between 0 and",redshift_value),
+      caption = "Source: Amita Muralikrishna",
       y = "Values",
       x = "Filter"
     ) +

@@ -9,7 +9,7 @@
 #' @import ggthemes
 #'
 #' @return Visualização de dados
-gridsom_boxplot <- function(conjunto){
+gridsom_boxplot <- function(conjunto, redshift_title){
   redshift_result <- gather_data(conjunto)
 
   ggplot(redshift_result, aes(x = as.factor(neurons), y = values, group=X)) +
@@ -23,14 +23,14 @@ gridsom_boxplot <- function(conjunto){
                  color="red",
                  fill="red") +
     labs(
-      title = "Redshift between 0 and 7",
-      caption = "Source: Amita",
-      y = "Sigma NMAD",
-      x = "# de Neuronios ocultos"
+      title = paste("Redshift between 0 and", redshift_title),
+      caption = "Source: Amita Muralikrishna",
+      y = expression(sigma~"NMAD"),
+      x = "Hidden Neurons"
     ) +
     scale_x_discrete(limits=c("5", "10", "30", "50", "70", "90")) +
     scale_y_continuous(
-      breaks = seq(0, 0.24, 0.04)
+      breaks = seq(0.00, 0.36, 0.06)
     ) +
     facet_grid(redshift_result$y ~ redshift_result$x) +
     theme_calc() +
@@ -40,11 +40,6 @@ gridsom_boxplot <- function(conjunto){
       panel.spacing = unit(0.6, "lines")
     )
 }
-
-# scale_y_continuous(
-#   breaks = seq(0, 0.06, 0.005)
-# ) +
-#   scale_x_continuous(breaks = c(5, 10, 30, 50, 70, 90)) +
 
 #' gather_data
 #'
