@@ -4,10 +4,14 @@
 \alias{treino}
 \title{treino}
 \usage{
-treino(lista)
+treino(lista, class, path, it)
 }
 \arguments{
 \item{lista}{recebe um tipo list contendo os valores agrupamentos SOMs}
+
+\item{path}{Caminho para a escrita do arquivo}
+
+\item{it}{número de iterações}
 }
 \description{
 Função necessário para treinar o conjunto
