@@ -2,10 +2,11 @@ nogrid_boxplot <- function(redshift, title){
   redshift_gather <- gather(redshift,
                             var,
                             values,
-                            -X,
-                            -neurons)
+                            -neurons,
+                            -id)
 
-  ggplot(redshift_gather, aes(x = as.factor(neurons), y = values, group=X)) +
+  ggplot(redshift_gather, aes(x = as.factor(neurons),
+                              y = values, group=id)) +
     geom_boxplot(outlier.colour="black",
                  outlier.shape=20,
                  outlier.size=2) +
@@ -21,7 +22,13 @@ nogrid_boxplot <- function(redshift, title){
       y = expression(sigma~"NMAD"),
       x = "Hidden Neurons"
     ) +
-    scale_x_discrete(limits=c("5", "10", "30", "50", "70", "90")) +
+    scale_y_continuous(breaks=seq(0, 0.2, 0.025))+
+    scale_x_discrete(limits=c("5",
+                              "10",
+                              "30",
+                              "50",
+                              "70",
+                              "90")) +
     theme_calc() +
     theme(
       plot.title = element_text(size = 12),

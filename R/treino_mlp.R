@@ -53,8 +53,7 @@ treino_mlp <- function(redshifts){
 
       Sigma[i] <-
         1.48 * median(abs((nnet.predict - redshiftsV$redshift) - median(nnet.predict -
-                                                                          redshiftsV$redshift)
-        ) / (1 + redshiftsV$redshift))
+                                                                          redshiftsV$redshift))/(1 + redshiftsV$redshift))
 
       redshiftsV$predicted <- nnet.predict
       # Remove data frame column after plotting!
@@ -65,5 +64,5 @@ treino_mlp <- function(redshifts){
     Sigmas <- rbind(Sigmas, newrow)
   }
   write.csv(Sigmas,
-            file = "Sigmas_nnet_specz0a1_nnet_result_100_it.csv")
+            file = "./inst/extdata/Sigmas_nnet_specz0a1_nnet_result_100_it.csv")
 }
